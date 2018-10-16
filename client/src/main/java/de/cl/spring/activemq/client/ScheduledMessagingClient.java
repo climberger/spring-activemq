@@ -26,7 +26,7 @@ public class ScheduledMessagingClient {
     @Scheduled(fixedRateString = "${messaging.client.message.interval}")
     public void sendMessage() {
         // Send a message with a POJO - the template reuse the message converter
-        Message message = new Message(dateFormat.format(new Date()), "cast@nterra.com", "Hello?");
+        Message message = new Message(dateFormat.format(new Date()), "john.doe@hello.com", "Hello?");
         log.info("Sending the message: \n{}", message.toString());
         jmsTemplate.convertAndSend(queue, message);
 
