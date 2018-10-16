@@ -1,0 +1,9 @@
+nterra:
+  messaging:
+    client.message.interval: '1000'
+    queue: nterra.cast.message
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
