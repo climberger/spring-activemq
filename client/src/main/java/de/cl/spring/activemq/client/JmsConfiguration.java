@@ -10,7 +10,7 @@ import javax.jms.Queue;
 @Configuration
 public class JmsConfiguration {
 
-    @Value("${nterra.messaging.queue}")
+    @Value("${messaging.queue}")
     private String queue;
 
     @Bean

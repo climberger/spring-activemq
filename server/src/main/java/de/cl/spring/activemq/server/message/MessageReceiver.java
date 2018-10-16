@@ -14,7 +14,7 @@ public class MessageReceiver {
     @Autowired
     private MessageService messageService;
 
-    @JmsListener(destination = "nterra.cast.message")
+    @JmsListener(destination = "message")
     public void receive(Message message) {
         log.info("Received Message: {}", message.toString());
         this.messageService.addMessage(message);

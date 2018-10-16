@@ -23,7 +23,7 @@ public class ScheduledMessagingClient {
     @Autowired
     private Queue queue;
 
-    @Scheduled(fixedRateString = "${nterra.messaging.client.message.interval}")
+    @Scheduled(fixedRateString = "${messaging.client.message.interval}")
     public void sendMessage() {
         // Send a message with a POJO - the template reuse the message converter
         Message message = new Message(dateFormat.format(new Date()), "cast@nterra.com", "Hello?");

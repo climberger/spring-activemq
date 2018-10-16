@@ -1,7 +1,6 @@
-nterra:
-  messaging:
-    client.message.interval: '1000'
-    queue: nterra.cast.message
+messaging:
+  client.message.interval: '1000'
+  queue: message
 spring:
   activemq:
     broker-url: tcp://localhost:61616
